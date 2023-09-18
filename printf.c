@@ -19,11 +19,22 @@ int _printf(const char *format, ...)
 	count = 0;
 	va_start(args, format);
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
+
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
+
+			if (*format == '\0')
+			{
+				return (-1);
+				va_end(args);
+			}
 		if (*format == 'c')
 		{
 			MyChar = va_arg(args, int);
