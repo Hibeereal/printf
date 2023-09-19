@@ -41,6 +41,7 @@ void printString(const char *str)
 
 int handleSpecifier(const char *format, va_list args)
 {
+	int num;
 	int count;
 	int MyChar;
 	char *MyString;
@@ -67,6 +68,14 @@ int handleSpecifier(const char *format, va_list args)
 				printChar('%');
 				count++;
 				break;
+		case 'd':
+		case 'i':
+				{
+					num = va_arg(args, int);
+					printf("%d", num);
+					count++;
+					break;
+				}
 		default:
 				printChar('%');
 				printChar(*format);
