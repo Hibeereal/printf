@@ -1,11 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
+void printString(const char *str);
+void printChar(int c);
+int handleSpecifier(const char *format, va_list args);
 int _printf(const char *format, ...);
 #endif
 
