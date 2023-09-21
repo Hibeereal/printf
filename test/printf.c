@@ -83,12 +83,6 @@ int handleSpecifier(const char *format, va_list args)
  */
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-	char *myString;
-	int MyChar;
-	int count;
-=======
->>>>>>> 1ab89998045877c44dc6bdc04a7e737fc9d93fed
 	va_list args;
 	int count;
 
@@ -121,4 +115,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
